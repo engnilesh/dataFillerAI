@@ -91,8 +91,9 @@ docker image rm datafiller-ai
 -------------------------------------------------
 
 > [!CAUTION]
-> 1. We sometimes get this anwers `"\u2022": 3` which has no meaning and gets store as • <br>
+> 1. We sometimes get this anwers `"\u2022": 3` which has no meaning and gets stored as • <br>
 > Need to do research and come with solid solution <br>
-> I think reason might be poor web scrapping operation (Garbage IN Garbage OUT) <br>
+> I think reason might be the poor web scrapping operation (Garbage IN Garbage OUT) <br>
 > Solution for Garbage in Garbage out: we need to improve web scraping operation so that the input data to the model is of good quality and so that model can predict the correct answer.
-> 2. Running dataFillerAI app with Local Model (i.e. "L") fails if the context is lager than > 512 (Token indices > sequence length), so either we need to retrain this model by changing config or restrict the provided length of input context.
+> 2. Running dataFillerAI app with Local Model (i.e. "L") fails if the context is lager than > 512 (Token indices > sequence length), so either we need to retrain this model by changing config or restrict the provided length of input context. <br>
+> Find more details at `app/notebooks/SolutionToLocalModelIndexingError.ipynb`
